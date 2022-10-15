@@ -18,7 +18,7 @@ RSpec.describe 'Testando a conversão de hashes em uma string' do
 
     convert1 = HashesToString.new(hashes1)
     result1 = convert1.hash_string
-    expect(result1).to eq("Maria Neusa de Aparecida97905796671Sao Paulo1234 \nRicardo Fontes44010762900Rio Grande do Sul567")
+    expect(result1).to eq("Maria Neusa97905796671Sao Paulo  1234        \nRicardo Fon44010762900Rio Grande 567        ")
   end
 
   it 'Teste 02: convertendo o primeiro conjunto de hashes' do
@@ -36,6 +36,6 @@ RSpec.describe 'Testando a conversão de hashes em uma string' do
 
     convert2 = HashesToString.new(hashes2)
     result2 = convert2.hash_string
-    expect(result2).to eq("Sergio Koiti Michelasso Oseko97905796671Sao Paulo2222 \nLeonardo Farias Oseko44010762900Rio Grande do Sul5555")
+    expect(result2).to eq("Sergio Koit97905796671Sao Paulo  2222        \nLeonardo Fa44010762900Rio Grande 5555       ")    
   end
 end
