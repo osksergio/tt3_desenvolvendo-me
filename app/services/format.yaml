@@ -1,19 +1,19 @@
 cpf:
   length: 11
-  align: left
-  padding: spaces
+  align: right
+  padding: zeroes
 
 name:
-  length: 11
+  length: 14
   align: left
   padding: spaces
 
 state:
-  length: 11
+  length: 18
   align: left
   padding: spaces
 
 value:
   length: 11
-  align: left
-  padding: spaces
+  align: right
+  padding: zeroes
