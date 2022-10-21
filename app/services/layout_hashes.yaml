@@ -5,6 +5,16 @@ name:
 
 cpf:
   position: 1
+  length: 11
+  format: 9
+
+state:
+  position: 1
+  length: 14
+  format: A
+
+value:
+  position: 1
   length: 15
   format: 9
 

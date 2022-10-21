@@ -21,9 +21,7 @@ class StringToHashes
     for i in 1..@str.length do
 
       if @str[i] = '\n'
-
         line_hash = ''
-
         name = ''
         cpf = ''
         state = ''
@@ -45,9 +43,12 @@ class StringToHashes
       for value_i in 1..@app_config['value']['length']
         value = value + @str[i]
       end
-
-
     end
-
+    line_hash.push({name: name, cpf: cpf, state: state, value: value})
   end
 end
+
+test1 = StringToHashes.new("Maria Neusa de 97905796671Sao Paulo     00001234 \nRicardo Fontes44010762900Rio Grande do S00000567")
+result1 = test1.string_to_hashes
+
+puts result1
