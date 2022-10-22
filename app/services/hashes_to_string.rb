@@ -59,4 +59,3 @@ class HashesToString
     result_string
   end
 end
-

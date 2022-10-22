@@ -17,7 +17,6 @@ class StringToHashes
     value = ''
     line_position = 0
 
-    # varredura da string
     for i in 0..(@str.length - 1) do
 
       if @str[i] == "\n"
@@ -47,7 +46,3 @@ class StringToHashes
     array_hashes
   end
 end
-
-test1 = StringToHashes.new("Maria Neusa de 97905796671Sao Paulo     00001234 \nRicardo Fontes44010762900Rio Grande do S00000567\n")
-result1 = test1.string_to_hashes
-puts result1
