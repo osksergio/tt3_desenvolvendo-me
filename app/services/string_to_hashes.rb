@@ -18,9 +18,9 @@ class StringToHashes
     line_position = 0
 
     # varredura da string
-    for i in 0..@str.length do
+    for i in 0..(@str.length - 1) do
 
-      if (@str[i] == "\n")
+      if @str[i] == "\n"
         array_hashes.push({name: name, cpf: cpf, state: state, value: value})
         name = ''
         cpf = ''
@@ -30,23 +30,24 @@ class StringToHashes
         i += 1
       end
 
-      name += @str[i] if line_position <= @app_config['name']['length']
+      name += @str[i] if line_position <= @app_config['name']['length'] and (@str[i] != nil)
 
-      cpf += @str[i] if line_position > (@app_config['name']['length']) and line_position <= (@app_config['name']['length'] + @app_config['cpf']['length'])
+      cpf += @str[i] if line_position > (@app_config['name']['length']) and line_position <= (@app_config['name']['length'] + @app_config['cpf']['length']) and
+        (@str[i] != nil)
 
       state += @str[i] if line_position > (@app_config['name']['length'] + @app_config['cpf']['length']) and
-        line_position <= (@app_config['name']['length'] + @app_config['cpf']['length'] + @app_config['state']['length'])
+        line_position <= (@app_config['name']['length'] + @app_config['cpf']['length'] + @app_config['state']['length']) and (@str[i] != nil)
 
       value += @str[i] if line_position > (@app_config['name']['length'] + @app_config['cpf']['length'] + @app_config['state']['length']) and
-        line_position <= (@app_config['value']['length'])
+        line_position <= (@app_config['value']['length']) and (@str[i] != nil)
 
       line_position += 1
     end
 
-    puts array_hashes
+    array_hashes
   end
 end
 
-test1 = StringToHashes.new("Maria Neusa de 97905796671Sao Paulo     00001234 \nRicardo Fontes44010762900Rio Grande do S00000567")
+test1 = StringToHashes.new("Maria Neusa de 97905796671Sao Paulo     00001234 \nRicardo Fontes44010762900Rio Grande do S00000567\n")
 result1 = test1.string_to_hashes
 puts result1
