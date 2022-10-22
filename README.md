@@ -5,7 +5,7 @@
 - Autor: Sergio Oseko (https://github.com/osksergio)
 - Mentor: Marco Castro
 
-Abaixo estão as tecnologias utilizadas neste projeto TT2:
+Abaixo estão as tecnologias utilizadas neste projeto TT3:
 
 * Ruby 3.1.2
 * Rails 6.1.7
